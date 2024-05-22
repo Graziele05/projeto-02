@@ -5,8 +5,8 @@ export function read(callback) {
 }
 export function create(
   nome,
-  rg,
   cpf,
+  rg,
   datanascimento,
   telefone,
   email,
@@ -15,14 +15,14 @@ export function create(
   callback
 ) {
   connection.query(
-    "INSERT INTO pessoas (nome, rg, cpf, datanascimento, telefone, email, nomepai, nomemae) VALUES(?, ?, ?, ?, ?, ?, ?, ?)",
-    [nome, rg, cpf, datanascimento, telefone, email, nomepai, nomemae],
+    "INSERT INTO pessoa (nome, cpf, rg, datanascimento, telefone, email, nomepai, nomemae) VALUES(?, ?, ?, ?, ?, ?, ?, ?)",
+    [nome, cpf, rg, datanascimento, telefone, email, nomepai, nomemae],
     callback
   );
 }
 export function update(id, novosDados, callback) {
   connection.query(
-    "Update pessoas set ? where id = ?",
+    "Update pessoa set ? where id = ?",
     [novosDados, id],
     callback
   );

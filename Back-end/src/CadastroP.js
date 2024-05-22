@@ -1,7 +1,8 @@
-class CadastroPessoa {
-    constructor(nome, cpf, datanascimento, telefone, email, nomepai, nomemae) {
+class CadastroP {
+    constructor(nome, cpf, rg, datanascimento, telefone, email, nomepai, nomemae) {
         this.nome = nome;
         this.cpf = cpf;
+        this.rg = rg;
         this.datanascimento = datanascimento;
         this.telefone = telefone;
         this.email = email;
@@ -15,6 +16,22 @@ class CadastroPessoa {
 
     setNome(novoNome) {
         this.nome = novoNome;
+    }
+
+    getCPF() {
+        return this.cpf;
+    }
+
+    setCPF(novoCPF) {
+        this.cpf = novoCPF;
+    }
+
+    getRG() {
+        return this.rg;
+    }
+
+    setRG(novoRG) {
+        this.rg = novoRG;
     }
 
     getDataNascimento() {
@@ -55,26 +72,7 @@ class CadastroPessoa {
 
     setNomeMae(novoNomeMae) {
         this.nomemae = novoNomeMae;
-    }
-
-    getCPF() {
-        return this.cpf;
-    }
-
-    setCPF(novoCPF) {
-        this.cpf = novoCPF;
-    }
-
-    getIdade() {
-        const hoje = new Date();
-        const nascimento = new Date(this.datanascimento);
-        let idade = hoje.getFullYear() - nascimento.getFullYear();
-        const mes = hoje.getMonth() - nascimento.getMonth();
-        if (mes < 0 || (mes === 0 && hoje.getDate() < nascimento.getDate())) {
-            idade--;
-        }
-        return idade;
-    }
+    }  
 }
 
-export default CadastroPessoa;
+export default CadastroP;

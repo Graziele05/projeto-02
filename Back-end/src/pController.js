@@ -16,12 +16,12 @@ res.status(201).json({ mensagem: 'Pessoa criada com sucesso' });
 
 //Realizando CONSULTA (READ)
 export async function getAllAsg(req, res) {
-    read((err, pessoas) => {
+    read((err, pessoa) => {
         if (err) {
             res.status(500).json({ error: err.message });
             return;
         }
-        res.json(pessoas);
+        res.json(pessoa);
     });
 }
 
