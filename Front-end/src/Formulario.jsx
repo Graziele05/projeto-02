@@ -51,6 +51,8 @@ function Formulario({ adicionarDados, dados, atualizarDado, editarIndex }) {
     };
 
     return (
+        <div className='fundo'>
+            <h2>Formulário</h2>
         <form onSubmit={handleSubmit}>
             <input type="text" name="nome" value={formValores.nome} onChange={handleChange} placeholder="Nome" /> <br />
             <input type="text" name="cpf" value={formValores.cpf} onChange={handleChange} placeholder="CPF" /> <br />
@@ -60,10 +62,12 @@ function Formulario({ adicionarDados, dados, atualizarDado, editarIndex }) {
             <input type="email" name="email" value={formValores.email} onChange={handleChange} placeholder="E-mail" /> <br />
             <input type="text" name="nomepai" value={formValores.nomepai} onChange={handleChange} placeholder="Nome do Pai" /> <br />
             <input type="text" name="nomemae" value={formValores.nomemae} onChange={handleChange} placeholder="Nome da Mãe" /> <br />
-    
-            {/* Renderização condicional do texto do botão */}
-            <button type="submit">{editarIndex !== null ? 'Atualizar' : 'Cadastrar'}</button>
+          
+         
+            <button type="submit">{editarIndex !== null ? 'Atualizar' : 'Cadastrar'} </button>
+            
         </form>
+        </div>
     );
 }
 

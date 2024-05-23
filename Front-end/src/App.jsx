@@ -3,7 +3,9 @@ import Topo from "./Topo";
 import Rodape from "./Rodape";
 import "./App.css";
 import Formulario from "./Formulario";
-import Dados from "./Dados";
+import { RxReset } from "react-icons/rx";
+
+
 
 function App() {
   const [secaoAtual, setSecaoAtual] = useState("home");
@@ -68,7 +70,7 @@ function App() {
             atualizarDado={atualizarDado}
             />
           <button onClick={resetarSecao} className="back">
-            Voltar
+          <RxReset size={30} />
           </button>
         </div>
       )}
@@ -82,7 +84,7 @@ function App() {
             atualizarDado={atualizarDado}
           />
           <button onClick={resetarSecao} className="back">
-            Voltar
+            <RxReset size={30}/>
           </button>
           <br />
           <br />
@@ -97,7 +99,8 @@ function App() {
             editarDado={editarDado}
           />
           <button onClick={resetarSecao} className="back">
-            Voltar
+
+            <RxReset size={30}/>
           </button>
         </div>
       )}
@@ -109,8 +112,8 @@ function App() {
             removerDado={removerDado}
             editarDado={editarDado}
           />
-          <button onClick={resetarSecao} className="back">
-            Voltar
+          <button onClick={resetarSecao}  className="back">
+            <RxReset size={30} />
           </button>
         </div>
       )}
