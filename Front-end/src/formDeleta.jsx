@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-function FormDeleta() {
+import { useState} from "react";
+function FormDelete() {
   const [formValores, setFormValores] = useState({
     id: "",
   });
@@ -54,4 +54,4 @@ function FormDeleta() {
   );
 }
 
-export default FormDeleta;
+export default FormDelete;

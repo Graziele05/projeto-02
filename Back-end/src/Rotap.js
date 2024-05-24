@@ -1,16 +1,16 @@
-const express = require("express"); 
+import express from "express"; 
 const app = express();
-const cors = require("cors");
-const connection = require('./db');
-import { getAllPessoa, createPessoa, updatePessoa, deletePessoa } from "./pController.js";
+import cors from"cors";
+
+import { getAllAsg, createAsg, updateAsg, deleteAsg} from "./pController.js";
 
 app.use(express.json());
 app.use(cors());
 
-app.get('/asg', getAllPessoa);
-app.post('/asg', createPessoa); 
-app.put('/asg/:id', updatePessoa);
-app.delete('/asg/:id', deletePessoa);
+app.get('/asg', getAllAsg);
+app.post('/asg', createAsg); 
+app.put('/asg/:id', updateAsg);
+app.delete('/asg/:id', deleteAsg);
 
 app.listen(3000, () => {
     console.log("Servidor rodando com sucesso na porta 3000");

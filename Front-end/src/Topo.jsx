@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./Topo.css";
 import { RxPlusCircled } from "react-icons/rx";
 import { RxLayers } from "react-icons/rx";

@@ -1,6 +1,7 @@
+/* eslint-disable no-unused-vars */
 import { create, read, update, deletePes } from './classmodel.js';
 
-export async function createPessoaAsg(req, res) {
+export async function createAsg(req, res) {
     const { nome, cpf, rg, datanascimento, telefone, email, nomepai, nomemae } = req.body;
     console.log('Dados recebidos do frontend:', { nome, cpf, rg, datanascimento, telefone, email, nomepai, nomemae });
 

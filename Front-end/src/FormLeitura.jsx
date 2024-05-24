@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 function FormLeitura() {
   const [consultaDados, setconsultaDados] = useState([]);
   const handleSubmit = async (e) => {
